@@ -1,0 +1,51 @@
+@font-face {
+    font-family:'Syne Tactile';
+    src: url('../fuentes/SyneTactile-Regular.ttf');
+}
+body {background-color:black;}
+#container {width:1800px;/* ancho de la foto */
+            height:800px;/* alto de la foto */
+            background-image: url('../imagenes/wallpaper.jpg');
+            margin: auto; /* container centrado */
+            position:relative; /* la posición del container puede variar */
+}
+#titulo { position:absolute; /* dentro de su contenedor, lo fijo en unas coord */
+          top:-5px;
+          left:500px;
+          font-family:'Syne Tactile';
+          font-size:2em;
+          text-shadow:1px 1px 1px #A43100;
+}
+#texto { position:absolute;
+         top:600px;
+         left:800px;
+         font-family:'Syne Tactile';
+         font-size:2em;
+         text-shadow:1px 1px 1px #fffb05;
+}
+#reycalabaza {position:absolute;
+     top:300px;
+     left:1400px;
+     visibility:hidden;
+}
+#calabaza{/*border:1px solid white;*/
+            width:360px;
+            height:250px;
+            position:absolute;
+            top:450px;
+            left:1310px;
+            cursor:pointer;/* el cursor cambia a clickable */
+}
+#zombie {position:absolute;
+     top:350px;
+     left:950px;
+     visibility:hidden;
+}
+#puertas{/*border:1px solid white;*/
+            width:100px;
+            height:100px;
+            position:absolute;
+            top:330px;
+            left:975px;
+            cursor:pointer;/* el cursor cambia a clickable */
+}

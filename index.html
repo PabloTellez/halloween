@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrorífica fiesta de Halloween</title>
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <!-- para sacar el estilo fuera, se llevan todas las reglas de estilo a un archivo
+         nuevo estilo.css que está en la carpeta estilos, y aquí, quito las etiquetas
+         de style y /style y las sustituyo por una etiqueta link -->
+         
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <!-- las funciones de javascript se pasan a un archivo aparte llamado funciones.js
+         en la carpeta javascripts, y aquí uso la etiqueta script y /script, pero vacia
+         y con el atributo src indicando donde está el archivo con las funciones -->
+    <script src="javascripts/funciones.js"></script>
+</head>
+<body onload="sonar('nana')"><!-- onload hace saltar el sonido de fondo
+                                  pero la mayoría de los navegadores, lo bloquea
+                                  si se pone en la etiqueta audio el atributo controls, yo
+                                  puedo hacerlo sonar a voluntad-->
+    <!-- PASO 1 - CREO UN CONTAINER del tamaño exacto del wallpaper-->
+    <!-- PASO 2 - EL CONTAINER TENDRÁ POSITION RELATIVE Y TODO LO QUE VAYA DENTRO
+                  POSITION RELATIVE Y COORDENADAS TOP Y LEFT -->
+    <!-- PASO 3 - ELEGIMOS TIPOGRAFÍA TERRORÍFICA Y AJUSTAMOS TAMAÑO-->
+    <!-- PASO 4 - BUSCAMOS PERSONAJE TERRORÍFICO CON GIF ANIMADO: FANTASMA, BRUJA-->
+    <!-- PASO 5 - POSICIONO UN DIV VACÍO SOBRE EL MURCIÉLAGO-->
+    <!-- PASO 6 - INCLUYO EN MURCIELAGO EVENTO QUE DISPARA LA FUNCION MOSTRAR
+                  PARA QUE SE VEA EL FANTASMA OCULTO -->
+    <div id="container">
+        <audio id="nana" controls><!-- este es para la música de fondo -->
+           <source src="sonidos/lullaby.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="grito"><!-- para cuando el fantasma aparece-->
+           <source src="sonidos/grito.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="rugido">
+             <source src="sonidos/rugido.mp3" type="audio/mpeg">
+        </audio>
+        <p id="titulo">Terrorifica fiesta <br>de Halloween</p>
+        <!-- al hacer click en el fantasma, se oculta el fantasma y para el sonido -->
+        <img id="reycalabaza" src="imagenes/calabaza.gif" height="200";parar('grito')>
+        <img id="zombie" src="imagenes/zombie.gif" height="110" onclick="ocultar('zombie');parar('rugido')">
+        <!-- al hacer click en el murcielago se muestra el fantasma y suena un grito-->
+        <div id="calabaza" onclick="mostrar('reycalabaza');sonar('grito')"></div>
+        <div id="puertas" onclick="mostrar('zombie');sonar('rugido')"></div>
+        <!-- aquí está el efecto de mostrar el fantasma oculto, al hacer click sobre
+             el recuadro del murciélago -->
+             <p id="texto">No hagas click en la calabaza o en las puertas del fondo, <br>si no quieres morir, 
+TRICK OR TREATING </p>
+    </div>
+</body>
+</html>
