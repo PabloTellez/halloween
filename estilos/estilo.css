@@ -38,14 +38,15 @@ body {background-color:black;}
 }
 #zombie {position:absolute;
      top:350px;
-     left:950px;
+     left:750px;
      visibility:hidden;
 }
 #puertas{/*border:1px solid white;*/
             width:100px;
             height:100px;
             position:absolute;
-            top:330px;
-            left:975px;
+            top:340px;
+            left:970px;
             cursor:pointer;/* el cursor cambia a clickable */
 }
+
